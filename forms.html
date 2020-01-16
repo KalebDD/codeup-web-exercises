@@ -5,14 +5,14 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="POST" action="https://hookb.in/3OQNWwXQrXHL6Jexam6l">
+    <form method="POST" action="https://hookb.in/3OQNWwXQrXHL6Jexam6l" enctype="multipart/form-data">
         <!--User Information-->
         <div id="user-info">
             <h2>Login Information</h2>
             <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="email" required>
+            <input id="email" type="email" name="email" placeholder="email" required>
             <label for="password">Password:</label>
-            <input type="password" id="password" placeholder="password" required>
+            <input id="password" type="password" name="password" placeholder="password" required>
         </div>
         <br>
         <!--Biography-->
@@ -24,16 +24,16 @@
         <!--How did you hear?-->
         <div id="how-you-heard">
             <h2>How did you hear about us?</h2>
-            <input type="radio" id="billboard" name="source1" value="billboard">
+            <input id="billboard" type="radio" name="source-board" value="billboard">
             <label for="billboard">Billboard</label>
             <br>
-            <input type="radio" id="radio-advertisement" name="source2" value="radio-advertisement">
+            <input id="radio-advertisement" type="radio" name="source-radio" value="radio-advertisement">
             <label for="radio-advertisement">Radio Advertisement</label>
             <br>
-            <input type="radio" id="internet-advertisement" name="source3" value="internet-advertisement">
+            <input id="internet-advertisement" type="radio" name="source-internet" value="internet-advertisement">
             <label for="internet-advertisement">Internet Advertisement</label>
             <br>
-            <input type="radio" id="other" name="source" value="other4" checked>
+            <input id="other" type="radio" name="source-other" value="other" checked>
             <label for="other">Other</label>
         </div>
         <br>
