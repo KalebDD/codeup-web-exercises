@@ -1,12 +1,12 @@
 :root {
-    --bg-info: lightseagreen;
-    --text-info: mediumspringgreen;
-    --bg-success: lightblue;
-    --text-success: mediumblue;
-    --bg-warning: lightyellow;
-    --text-warning: goldenrod;
-    --bg-error: firebrick;
-    --text-error: orangered;
+    --bg-info: rgb(203, 220, 255);
+    --text-info: rgb(54, 2, 145);
+    --bg-success: rgb(198, 247, 217);
+    --text-success: rgb(12, 116, 53);
+    --bg-warning: rgb(251, 254, 196);
+    --text-warning: rgb(150, 134, 25);
+    --bg-error: rgb(255, 209, 214);
+    --text-error: rgb(154, 41, 64);
 }
 
 body, html {
