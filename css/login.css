@@ -25,6 +25,7 @@ fieldset {
     /* It should have no border */
     /* Its background should be white */
     padding: 1em;
+    border: 0;
     background-color: #fff;
 }
 
@@ -39,8 +40,7 @@ fieldset {
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
     width: 100%;
-    padding-top: .25em;
-    padding-bottom: .25em;
+    margin: .5em auto;
 }
 
 .form-label {
@@ -72,10 +72,8 @@ fieldset {
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
     width: calc(100% - 4px);
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-top: .25em;
-    margin-bottom: .25em;
+    padding: 4px 0;
+    margin: .5em auto;
 }
 
 
