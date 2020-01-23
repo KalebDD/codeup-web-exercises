@@ -62,20 +62,17 @@ a {
     line-height: 80px;
 }
 .profile-details {
-    position: relative;
     float: left;
     width: calc(25% - 1em);
     margin: 0 .5em;
 }
 .timeline {
-    position: relative;
     float: left;
     width: calc(50% - 1em);
     margin: 0 .5em;
 }
 .who-to-follow {
-    position: relative;
-    float: right;
+    float: left;
     width: calc(25% - 1em);
     margin: 0 .5em;
 }

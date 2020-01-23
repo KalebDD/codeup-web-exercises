@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realtor Form Practice</title>
+</head>
+<body>
+    <form method="POST" action="">
+
+        <header>
+            <div>
+                <p>
+                    Received on
+                    <input id="receive-date" type="text" name="receive-date">
+                    <label for="receive-date">(date)</label>
+                    at
+                    <input id="receive-time" type="text" name="receive-time">
+                    <label for="receive-time">(time)</label>
+                </p>
+            </div>
+            <div>
+                <img src="">
+                <h3>Texas Association of Realtors</h3>
+                <h1>RESIDENTIAL LEASE APPLICATION</h1>
+                <p>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS IS NOT AUTHORIZED.</p>
+                <p>&copy;Texas Association of REALTORS&reg;, Inc. 2007</p>
+                <p>Each occupant and co-applicant 18 years or older must submit a separate application.</p>
+            </div>
+        </header>
+
+        <main>
+            <!--Address-->
+            <div id="address">
+                <p>
+                    <label for="address">Property Address:</label>
+                    <input id="address" type="text" name="address">
+                </p>
+                <p>
+                    <label for="movein-date">Anticipated: Move-in Date:</label>
+                    <input id="movein-date" type="text" name="movein-date">
+                    <label for="rent">Monthly Rent: $</label>
+                    <input id="rent" type="text" name="rent">
+                    <label for="deposit">Security Deposit: $</label>
+                    <input id="deposit" type="text" name="deposit">
+                </p>
+            </div>
+            <!--Reference-->
+            <div id="reference">
+                <p>Applicant was referred to Landlord by:</p>
+                <input id="estate-agent" type="checkbox" name="estate-agent" value="estate-agent">
+                <label for="estate-agent">Real estate agent</label>
+                <input id="agent-name" type="text" name="agent-name">
+
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+
+    </form>
+</body>
+</html>
