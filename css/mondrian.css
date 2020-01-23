@@ -17,7 +17,6 @@ body {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     grid-gap: 6px;
-
 }
 
 #one {grid-area: 1/1/3/3;
