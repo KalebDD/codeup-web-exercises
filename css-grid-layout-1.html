@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout Exercise 1</title>
+
+    <!--Inline Styling-->
+    <style>
+        :root {
+            --company-color: rgb(255, 221, 0);
+        }
+        body {
+            background-color: white;
+            margin: 0;
+        }
+       .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 8px;
+            padding: 1vh;
+            height: 98vh;
+        }
+       .container > * {
+           padding: 20px;
+       }
+        header {
+            grid-area: 1/1/2/span 6;
+            background-color: var(--company-color);
+        }
+        nav {
+            grid-area: 2/1/7/2;
+            background-color: var(--company-color);
+            min-width: 100px;
+        }
+        main {
+            grid-area: 2/2/6/6;
+            background-color: var(--company-color);
+
+        }
+        #adspace {
+            grid-area: 2/6/6/7;
+            background-color: var(--company-color);
+
+        }
+        footer {
+            grid-area: 6/2/7/7;
+            background-color: var(--company-color);
+
+        }
+
+    </style>
+</head>
+<body class="container">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Article</main>
+    <div id="adspace">Ads</div>
+    <footer>Footer</footer>
+</body>
+</html>
