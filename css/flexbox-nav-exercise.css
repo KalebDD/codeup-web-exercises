@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+header {
+    background-color: rgb(193, 193, 193);
+}
+#navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em .7em;
+}
+li {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1em;
+    padding-right: .7em;
+}
+li:nth-of-type(4) {
+    margin-right: auto;
+}
+li:nth-of-type(6) {
+    margin-left: auto;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding: .2em 0;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+}
