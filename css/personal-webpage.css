@@ -1,3 +1,4 @@
 body {
-    background-image: img/personal-bg-stonebrick-wall.jpg;
+    /*background-image: url("../img/personal-bg-stonebrick-wall.jpg");*/
+    background-size: 100vw;
 }
