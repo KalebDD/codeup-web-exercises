@@ -148,7 +148,7 @@
         return Math.abs(number);
     }
     function rollDice(sides) {
-        // Math.floor(Math.random() * sides) + 1);
+        return Math.floor(Math.random() * sides) + 1);
     }
 
 
