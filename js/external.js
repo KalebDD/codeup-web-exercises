@@ -1,12 +1,12 @@
 "use strict";
 
+
 // console.log("Hello from external JavaScript.");
 //
 // alert("Welcome to my Website!");
 // var userFavoriteColor = prompt("What's your favorite color?");
 // alert("Awesome, " + userFavoriteColor + " is my favorite color too!");
-
-
+//
 
 
 // //MOVIE RATES
@@ -18,7 +18,6 @@
 // var movieHercules = Number(prompt("How long have you rented Hercules for?"));
 //
 // alert("Excellent! Your total sans sales tax comes out to: " + (movieLittleMermaid+movieBrotherBear+movieHercules)*movieRate + "!");
-//
 
 
 // //JOB RATES
@@ -30,15 +29,20 @@
 // var amazonHours = Number(prompt("How many hours did you work for Amazon this week?"));
 // var facebookHours = Number(prompt("This week, how many hours did you work for Facebook?"));
 // alert("Excellent! Your total pay for this week is: $" + ((googleRate*googleHours)+(amazonRate+amazonHours)+(facebookRate*facebookHours)) + "!");
-
-
+//
 
 
 //CAN THE STUDENT ENROLL?
 // alert("Let's check and see if you can enroll in this class.");
-// var classFull = confirm("Is this class full?");
-// var classSchedule = confirm("Does the class schedule interfere with your schedule?");
 //
+//
+// //NO CONDITIONALS, VIVIAN SOLUTION
+// // var classFull = confirm("Is this class full?");
+// // var classSchedule = confirm("Does the class schedule interfere with your schedule?");
+// // var studentEnroll = !classFull && !classSchedule;
+// // alert("You can enroll: " + studentEnroll);
+//
+// // CONDITIONALS, KALEB SOLUTION
 // if (classFull === false && classSchedule === false) {
 //     alert("Success! You can enroll!");
 // } else {
@@ -46,13 +50,23 @@
 // }
 
 
-//PRODUCT OFFER
-var premiumMember = confirm("Are you a premium member?");
-var numberOfItems = Number(prompt("How many items do you have?"));
-var offerExpired = confirm("Has this offer expired?");
+// //PRODUCT OFFER
+//NO CONDITIONAL, VIVIAN SOLUTION
+var numberOfItems = Number(prompt("How many items are you buying?"));
+var offerIsValid = confirm("Is the offer valid?");
+var isPremiumMember = confirm("Are you a premium member?");
 
- if ((numberOfItems > 2 || premiumMember === true) && (offerExpired === false)) {
-    alert("Hooray! You can use apply this offer!");
-} else {
-    alert("Sorry, looks like you cannot use this offer.");
-}
+var discountStatus = offerIsValid && (isPremiumMember || numberOfItems > 2);
+alert("This discount can be applied: " + discountStatus);
+
+
+//CONDITIONAL, KALEB SOLUTION
+// var premiumMember = confirm("Are you a premium member?");
+// var numberOfItems = Number(prompt("How many items do you have?"));
+// var offerExpired = confirm("Has this offer expired?");
+//
+//  if ((numberOfItems > 2 || premiumMember) && (offerExpired === false)) {
+//     alert("Hooray! You can use apply this offer!");
+// } else {
+//     alert("Sorry, looks like you cannot use this offer.");
+// }
