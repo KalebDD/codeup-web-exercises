@@ -77,7 +77,7 @@
     var billTotal = Number(prompt("What was your bill total?"));
     var tipPercent = Number(prompt("What percentage would you like to tip?"));
     var tipTotal = calculateTip(tipPercent, billTotal);
-    alert("Your tip total is: $" + tipTotal);
+    alert("Your tip total is: $" + tipTotal.toFixed(2));
     /**
      * TODO:
      * Create a function named `applyDiscount`. This function should accept a price

@@ -148,8 +148,27 @@
         return Math.abs(number);
     }
     function rollDice(sides) {
-        return Math.floor(Math.random() * sides) + 1);
+        return Math.floor((Math.random() * sides) + 1);
     }
+    function returnTwo() {
+        return 2;
+    }
+    console.log(returnTwo);
+    function sayHowdy() {
+        console.log("Howdy!");
+    }
+    function returnName() {
+        return "Kaleb";
+    }
+    console.log(returnName());
+    function addThree(num) {
+        return num + 3;
+    }
+    console.log(addThree(5));
+    function sayString(str) {
+        return str;
+    }
+    console.log(sayString());
 
 
 })();
