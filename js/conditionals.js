@@ -15,6 +15,45 @@
  *
  * Can you refactor your code to use functions?
  */
+//FUNCTIONS
+function userNumberAlerts(num) {
+    var numberMessages = "";
+
+
+}
+
+//NO FUNCTIONS
+// var confirm = confirm("Would you like to enter a number?");
+// if (confirm === true) {
+//     var userNumber = Number(prompt("Please enter your number."));
+//
+//     if (typeof userNumber == 'number' && userNumber != NaN) {
+//         switch (true) {
+//             case (userNumber % 2 === 0): //check if even
+//                 alert("Your number is even.");
+//                 break;
+//             default: //check if odd
+//                 alert("Your number is odd.");
+//                 break;
+//         }
+//         alert("Your number plus 100 is: " + (userNumber + 100));
+//         switch (true) {
+//             case userNumber >= 1: // check if positive
+//                 alert("Your number is also positive.");
+//                 break;
+//             case userNumber <= -1: //check if negative
+//                 alert("Your number is also negative.");
+//                 break;
+//             default:
+//                 alert("Your number is 0 - neither positive nor negative.");
+//                 break;
+//         }
+//     } else {
+//         alert("You have not entered a number. Please refresh the page and try again.");
+//     }
+// } else {
+//     alert("Ok. If you change your mind, please refresh the page and try again.");
+// }
 
 /* ########################################################################## */
 
