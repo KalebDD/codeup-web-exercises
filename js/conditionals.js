@@ -20,12 +20,13 @@ function userNumberAlerts(num) {
     var numberMessages;
 
     numberMessages = (num >= 0 ? "Your number is even.\n" : "Your number is odd.\n");
-    numberMessages += "Your number plus 100 is: " + (num+100) + "\n";
+    numberMessages += "Your number plus 100 is: " + (num + 100) + "\n";
     numberMessages += (num >= 1 ? "Your number is positive." : (num <= -1 ? "Your number is negative." : "Your number is 0, neither positive nor negative."));
 
     return numberMessages;
 
 }
+
 var confirm = confirm("Would you like to enter a number?");
 
 if (confirm === true) {
@@ -93,6 +94,29 @@ if (confirm === true) {
  * console.logging the function's return value
  */
 
+function analyzeColor(input) {
+    var message = "";
+
+    if (input.toLowerCase() === 'red') {
+        message = "Red is the color for Valentine's Day.";
+    } else if (input.toLowerCase() === 'orange') {
+        message = "Orange is the color of sunsets.";
+    } else if (input.toLowerCase() === 'yellow') {
+        message = "Yellow is the color of sunflowers.";
+    } else if (input.toLowerCase() === 'green') {
+        message = "Green is the color of spring's leaves.";
+    } else if (input.toLowerCase() === 'blue') {
+        message = "Blue is the color of the ocean.";
+    } else if (input.toLowerCase() === 'indigo') {
+        message = "Indigo is the color of peonies.";
+    } else if (input.toLowerCase() === 'violet') {
+        message = "Violet is the color of royalty.";
+    } else {
+        message = input + " isn't a registered color!";
+    }
+    return message;
+}
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -105,11 +129,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+function analyzeColorExample2(input) {
+    var message = "";
+
+    switch (true) {
+        case input.toLowerCase() === 'red':
+            message = "Red is the color for Valentine's Day.";
+            break;
+        case input.toLowerCase() === 'orange':
+            message = "Orange is the color of sunsets.";
+            break;
+        case input.toLowerCase() === 'yellow':
+            message = "Yellow is the color of sunflowers.";
+            break;
+        case input.toLowerCase() === 'green':
+            message = "Green is the color of spring's leaves.";
+            break;
+        case input.toLowerCase() === 'blue':
+            message = "Blue is the color of the ocean.";
+            break;
+        case input.toLowerCase() === 'indigo':
+            message = "Indigo is the color of peonies.";
+            break;
+        case input.toLowerCase() === 'violet':
+            message = "Violet is the color of royalty.";
+            break;
+        default:
+            message = input + " isn't a registered color!";
+            break;
+    }
+    return message;
+}
 
 /**
  * TODO:
@@ -117,7 +174,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+var userFavoriteColor = prompt("Hello! What is your favorite color?");
+alert(analyzeColorExample2(userFavoriteColor));
 /* ########################################################################## */
 
 /**
@@ -139,6 +197,40 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(total) {
+    var discountMessage = "";
+    var discountPercents = [.1, .25, .35, .50, 1];
+    var luckyNum = Math.floor(Math.random() * 6);
+
+    switch (true) {
+        case luckyNum === 0:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nI'm sorry, you have no discount today!";
+            break;
+        case luckyNum === 1:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total*discountPercents[0]);
+            break;
+        case luckyNum === 2:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total*discountPercents[1]);
+            break;
+        case luckyNum === 3:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total*discountPercents[2]);
+            break;
+        case luckyNum === 4:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total*discountPercents[3]);
+            break;
+        case luckyNum === 5:
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total*discountPercents[4]);
+            break;
+    }
+    return discountMessage;
+}
+
+var userTotal = Number(prompt("Enter your total amount today to receive your lucky number!"));
+     if (typeof userTotal === 'number' && userTotal != NaN) {
+         alert(calculateTotal(userTotal));
+     } else {
+         alert("I'm sorry, you have not entered a number. Please refresh the page and try again.");
+     }
 
 /**
  * TODO:
