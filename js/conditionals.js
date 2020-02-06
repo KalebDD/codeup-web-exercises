@@ -17,9 +17,27 @@
  */
 //FUNCTIONS
 function userNumberAlerts(num) {
-    var numberMessages = "";
+    var numberMessages;
 
+    numberMessages = (num >= 0 ? "Your number is even.\n" : "Your number is odd.\n");
+    numberMessages += "Your number plus 100 is: " + (num+100) + "\n";
+    numberMessages += (num >= 1 ? "Your number is positive." : (num <= -1 ? "Your number is negative." : "Your number is 0, neither positive nor negative."));
 
+    return numberMessages;
+
+}
+var confirm = confirm("Would you like to enter a number?");
+
+if (confirm === true) {
+    var userNumber = Number(prompt("Please enter a number."));
+
+    if (typeof userNumber == 'number' && userNumber != NaN) {
+        alert(userNumberAlerts(userNumber));
+    } else {
+        alert("You have not entered a valid number. Please refresh the page to try again.");
+    }
+} else {
+    alert("Ok. If you change your mind, please refresh the page and try again.");
 }
 
 //NO FUNCTIONS
