@@ -46,7 +46,7 @@
     }
     function isVowel(letter) {
         // return ['a','e','i','o','u'].indexOf(letter.toLowerCase()) !== -1;
-        return letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o'        || letter === 'u';
+        return letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u';
     }
     function isConsonant(letter) {
         return !isVowel(letter);
@@ -169,6 +169,69 @@
         return str;
     }
     console.log(sayString());
+    function identity2(input) {
+        return input;
+    }
+    function getRandomNumber(min, max) {
+        return Math.floor((Math.random() * max) + min);
+    }
+    function first(input) {
+        //return (input.toString()[0]);
+        var stringInput = input.toString();
+        return stringInput[0];
+    }
+    function last(input) {
+        // return input.charAt(input.length - 1);
+        return String(input).charAt(String(input).length - 1);
+    }
+    function rest(input) {
+        return input.substr(1);
+        // var newInput = input.replace(input.charAt(0), '');
+        // return newInput;
+    }
+    function reverse(input) {
+        return input.split("").reverse().join("");
+    }
+    function isNumeric(input) {
+        return typeof input === 'number';
+    }
+    function count(input) {
+        return input.length;
+    }
+    function add(a, b) {
+        return a + b;
+    }
+    function subtractExample2(a, b) {
+        return a - b;
+    }
+    function multiplyExample2(a, b) {
+        return a * b;
+    }
+    function divideExample2(numerator, denominator) {
+        return numerator / denominator;
+    }
+    function remainderExample2(number, divisor) {
+        return number % divisor;
+    }
+    function square(a) {
+        return Math.pow(a, 2);
+    }
+    function sumOfSquares(a, b) {
+        return add(square(a),square(b));
+    }
+    function doMath(operator, a, b) {
+        return operator(a, b);
+    }
+    function numberOfWhitespaceCharacters(str) {
+        var totalWhitespaces = str.length - str.trim().length;
+
+        return totalWhitespaces;
+    }
+    function stringsArePresent(str1, str2) {
+        if (str2 == str1.charAt(0, str1.length)) {
+            return
+        }
+    }
 
 
 })();
