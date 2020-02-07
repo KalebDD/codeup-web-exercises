@@ -45,9 +45,9 @@ if (confirm === true) {
 //NO FUNCTIONS
 // var confirm = confirm("Would you like to enter a number?");
 // if (confirm === true) {
-//     var userNumber = Number(prompt("Please enter your number."));
+//     var userNumber = prompt("Please enter your number.");
 //
-//     if (typeof userNumber == 'number' && userNumber != NaN) {
+//     if (Number(userNumber) == userNumber) {
 //         switch (true) {
 //             case (userNumber % 2 === 0): //check if even
 //                 alert("Your number is even.");
@@ -56,7 +56,7 @@ if (confirm === true) {
 //                 alert("Your number is odd.");
 //                 break;
 //         }
-//         alert("Your number plus 100 is: " + (userNumber + 100));
+//         alert("Your number plus 100 is: " + (Number(userNumber) + 100));
 //         switch (true) {
 //             case userNumber >= 1: // check if positive
 //                 alert("Your number is also positive.");
