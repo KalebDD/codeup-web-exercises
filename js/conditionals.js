@@ -30,9 +30,9 @@ function userNumberAlerts(num) {
 
 var confirm = confirm("Would you like to enter a number?");
 
-if (confirm === true) {
+if (confirm) {
     var userNumber = prompt("Please enter a number.");
-
+        // number == string
     if (Number(userNumber) == userNumber) {
         alert(userNumberAlerts(Number(userNumber)));
     } else {
@@ -44,26 +44,31 @@ if (confirm === true) {
 
 //NO FUNCTIONS
 // var confirm = confirm("Would you like to enter a number?");
-// if (confirm === true) {
+// if (confirm) {
 //     var userNumber = prompt("Please enter your number.");
 //
 //     if (Number(userNumber) == userNumber) {
 //         switch (true) {
-//             case (userNumber % 2 === 0): //check if even
+//             //check if even
+//             case (userNumber % 2 === 0):
 //                 alert("Your number is even.");
 //                 break;
-//             default: //check if odd
+//             //check if odd
+//             default:
 //                 alert("Your number is odd.");
 //                 break;
 //         }
 //         alert("Your number plus 100 is: " + (Number(userNumber) + 100));
 //         switch (true) {
-//             case userNumber >= 1: // check if positive
+//             // check if positive
+//             case userNumber >= 1:
 //                 alert("Your number is also positive.");
 //                 break;
-//             case userNumber <= -1: //check if negative
+//             //check if negative
+//             case userNumber <= -1:
 //                 alert("Your number is also negative.");
 //                 break;
+//             // userNumber is 0
 //             default:
 //                 alert("Your number is 0 - neither positive nor negative.");
 //                 break;
@@ -96,7 +101,7 @@ if (confirm === true) {
  */
 
 function analyzeColor(input) {
-    var message = "";
+    var message;
 
     if (input.toLowerCase() === 'red') {
         message = "Red is the color for Valentine's Day.";
@@ -138,7 +143,7 @@ console.log(analyzeColor(randomColor));
  */
 
 function analyzeColorExample2(input) {
-    var message = "";
+    var message;
 
     switch (true) {
         case input.toLowerCase() === 'red':
@@ -203,7 +208,7 @@ function calculateTotal(total) {
     var discountPercents = [.1, .25, .35, .50, 1];
     var luckyNum = Math.floor(Math.random() * 6);
     var discountMessageTemplate = "Your total is: $ " + total + "\nYour lucky number is: " + luckyNum;
-    var discountMessage = "";
+    var discountMessage;
 
     switch (true) {
         case luckyNum === 0:

@@ -228,9 +228,10 @@
         return totalWhitespaces;
     }
     function stringsArePresent(str1, str2) {
-        if (str2 == str1.charAt(0, str1.length)) {
-            return
-        }
+        return str1.replace(str2, '');
+    }
+    function lastLetterA(str) {
+        return (str.charAt(str.length-1) === 'a');
     }
 
 
