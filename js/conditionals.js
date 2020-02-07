@@ -22,6 +22,7 @@ function userNumberAlerts(num) {
 
     numberMessages = (num % 2 === 0 ? "Your number is even.\n" : "Your number is odd.\n");
     numberMessages += "Your number plus 100 is: " + (num + 100) + "\n";
+    //line below just to understand theory of nesting ternary
     numberMessages += (num >= 1 ? "Your number is positive." : (num <= -1 ? "Your number is negative." : "Your number is 0, neither positive nor negative."));
 
     return numberMessages;
@@ -32,7 +33,7 @@ var confirm = confirm("Would you like to enter a number?");
 
 if (confirm) {
     var userNumber = prompt("Please enter a number.");
-        // number == string
+    //if (!isNaN(userNumber) <-----better way to do comparison
     if (Number(userNumber) == userNumber) {
         alert(userNumberAlerts(Number(userNumber)));
     } else {
@@ -100,25 +101,27 @@ if (confirm) {
  * console.logging the function's return value
  */
 
-function analyzeColor(input) {
+function analyzeColor(color) {
     var message;
 
-    if (input.toLowerCase() === 'red') {
+    var colorCheck = color.toLowerCase();
+
+    if (colorCheck === 'red') {
         message = "Red is the color for Valentine's Day.";
-    } else if (input.toLowerCase() === 'orange') {
+    } else if (colorCheck === 'orange') {
         message = "Orange is the color of sunsets.";
-    } else if (input.toLowerCase() === 'yellow') {
+    } else if (colorCheck === 'yellow') {
         message = "Yellow is the color of sunflowers.";
-    } else if (input.toLowerCase() === 'green') {
+    } else if (colorCheck === 'green') {
         message = "Green is the color of spring's leaves.";
-    } else if (input.toLowerCase() === 'blue') {
+    } else if (colorCheck === 'blue') {
         message = "Blue is the color of the ocean.";
-    } else if (input.toLowerCase() === 'indigo') {
+    } else if (colorCheck === 'indigo') {
         message = "Indigo is the color of peonies.";
-    } else if (input.toLowerCase() === 'violet') {
+    } else if (colorCheck === 'violet') {
         message = "Violet is the color of royalty.";
     } else {
-        message = input + " isn't a registered color!";
+        message = color + " isn't a registered color!";
     }
     return message;
 }
@@ -142,33 +145,35 @@ console.log(analyzeColor(randomColor));
  * Refactor your above function to use a switch-case statement
  */
 
-function analyzeColorExample2(input) {
+function analyzeColorExample2(color) {
     var message;
 
-    switch (true) {
-        case input.toLowerCase() === 'red':
+    var colorCheck = color.toLowerCase();
+
+    switch (colorCheck) {
+        case 'red':
             message = "Red is the color for Valentine's Day.";
             break;
-        case input.toLowerCase() === 'orange':
+        case 'orange':
             message = "Orange is the color of sunsets.";
             break;
-        case input.toLowerCase() === 'yellow':
+        case 'yellow':
             message = "Yellow is the color of sunflowers.";
             break;
-        case input.toLowerCase() === 'green':
+        case 'green':
             message = "Green is the color of spring's leaves.";
             break;
-        case input.toLowerCase() === 'blue':
+        case 'blue':
             message = "Blue is the color of the ocean.";
             break;
-        case input.toLowerCase() === 'indigo':
+        case 'indigo':
             message = "Indigo is the color of peonies.";
             break;
-        case input.toLowerCase() === 'violet':
+        case 'violet':
             message = "Violet is the color of royalty.";
             break;
         default:
-            message = input + " isn't a registered color!";
+            message = color + " isn't a registered color!";
             break;
     }
     return message;
@@ -210,23 +215,23 @@ function calculateTotal(total) {
     var discountMessageTemplate = "Your total is: $ " + total + "\nYour lucky number is: " + luckyNum;
     var discountMessage;
 
-    switch (true) {
-        case luckyNum === 0:
+    switch (luckyNum) {
+        case 0:
             discountMessage = discountMessageTemplate + "! \nI'm sorry, you have no discount today!";
             break;
-        case luckyNum === 1:
+        case 1:
             discountMessage = discountMessageTemplate + "\nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total * discountPercents[0]);
             break;
-        case luckyNum === 2:
+        case 2:
             discountMessage = discountMessageTemplate + "\nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total * discountPercents[1]);
             break;
-        case luckyNum === 3:
+        case 3:
             discountMessage = discountMessageTemplate + "\nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total * discountPercents[2]);
             break;
-        case luckyNum === 4:
+        case 4:
             discountMessage = discountMessageTemplate + "\nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total * discountPercents[3]);
             break;
-        case luckyNum === 5:
+        case 5:
             discountMessage = discountMessageTemplate + "\nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total * discountPercents[4]);
             break;
     }
