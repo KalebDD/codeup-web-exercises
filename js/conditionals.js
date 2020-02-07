@@ -17,9 +17,10 @@
  */
 //FUNCTIONS
 function userNumberAlerts(num) {
+
     var numberMessages;
 
-    numberMessages = (num >= 0 ? "Your number is even.\n" : "Your number is odd.\n");
+    numberMessages = (num % 2 === 0 ? "Your number is even.\n" : "Your number is odd.\n");
     numberMessages += "Your number plus 100 is: " + (num + 100) + "\n";
     numberMessages += (num >= 1 ? "Your number is positive." : (num <= -1 ? "Your number is negative." : "Your number is 0, neither positive nor negative."));
 
@@ -30,10 +31,10 @@ function userNumberAlerts(num) {
 var confirm = confirm("Would you like to enter a number?");
 
 if (confirm === true) {
-    var userNumber = Number(prompt("Please enter a number."));
+    var userNumber = prompt("Please enter a number.");
 
-    if (typeof userNumber == 'number' && userNumber != NaN) {
-        alert(userNumberAlerts(userNumber));
+    if (Number(userNumber) == userNumber) {
+        alert(userNumberAlerts(Number(userNumber)));
     } else {
         alert("You have not entered a valid number. Please refresh the page to try again.");
     }
@@ -176,6 +177,7 @@ function analyzeColorExample2(input) {
  */
 var userFavoriteColor = prompt("Hello! What is your favorite color?");
 alert(analyzeColorExample2(userFavoriteColor));
+
 /* ########################################################################## */
 
 /**
@@ -207,30 +209,31 @@ function calculateTotal(total) {
             discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nI'm sorry, you have no discount today!";
             break;
         case luckyNum === 1:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total*discountPercents[0]);
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total * discountPercents[0]);
             break;
         case luckyNum === 2:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total*discountPercents[1]);
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total * discountPercents[1]);
             break;
         case luckyNum === 3:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total*discountPercents[2]);
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total * discountPercents[2]);
             break;
         case luckyNum === 4:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total*discountPercents[3]);
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total * discountPercents[3]);
             break;
         case luckyNum === 5:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total*discountPercents[4]);
+            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total * discountPercents[4]);
             break;
     }
     return discountMessage;
 }
 
-var userTotal = Number(prompt("Enter your total amount today to receive your lucky number!"));
-     if (typeof userTotal === 'number' && userTotal != NaN) {
-         alert(calculateTotal(userTotal));
-     } else {
-         alert("I'm sorry, you have not entered a number. Please refresh the page and try again.");
-     }
+var userTotal = prompt("Enter your total amount today to receive your lucky number!");
+
+if (Number(userTotal) == userTotal) {
+    alert(calculateTotal(Number(userTotal)));
+} else {
+    alert("I'm sorry, you have not entered a number. Please refresh the page and try again.");
+}
 
 /**
  * TODO:
