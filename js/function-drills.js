@@ -39,10 +39,10 @@
         return false === boolean;
     }
     function isTruthy(input) {
-        return true == Boolean(input);
+        return Boolean(input);
     }
     function isFalsy(input) {
-        return false == !!input;
+        return !!input;
     }
     function isVowel(letter) {
         // return ['a','e','i','o','u'].indexOf(letter.toLowerCase()) !== -1;
@@ -58,7 +58,7 @@
         return letter === letter.toLowerCase();
     }
     function hasLowerCase(str) {
-        return str.toUpperCase() != string;
+        return str.toUpperCase() != str;
     }
     function isSpace(letter) {
         return letter === ' ';
@@ -233,6 +233,21 @@
     function lastLetterA(str) {
         return (str.charAt(str.length-1) === 'a');
     }
+    function whitespaceValueAtBeginning(str) {
+        return str.length - str.trimLeft().length;
+    }
+    function returnTrueMessage(str) {
+        return "Hey, it's true!";
+    }
+    function returnFalseMessage(str) {
+        return "Hey, it's false!";
+    }
+    function returnMessage(input) {
+        return returnMessage;
+    }
+    function willLoginUser(username, password, age, admin) {
+        var canLogin = (username !== password && age >= 18) || (username !== password && admin);
 
-
+        return canLogin;
+    }
 })();
