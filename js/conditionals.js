@@ -200,28 +200,29 @@ alert(analyzeColorExample2(userFavoriteColor));
  * return value.
  */
 function calculateTotal(total) {
-    var discountMessage = "";
     var discountPercents = [.1, .25, .35, .50, 1];
     var luckyNum = Math.floor(Math.random() * 6);
+    var discountMessageTemplate = "Your total is: $ " + total + "\nYour lucky number is: " + luckyNum;
+    var discountMessage = "";
 
     switch (true) {
         case luckyNum === 0:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nI'm sorry, you have no discount today!";
+            discountMessage = discountMessageTemplate + "! \nI'm sorry, you have no discount today!";
             break;
         case luckyNum === 1:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total * discountPercents[0]);
+            discountMessage = discountMessageTemplate + "\nCongratulations! You got a 10% discount! \nYour new total is: $" + (total - total * discountPercents[0]);
             break;
         case luckyNum === 2:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total * discountPercents[1]);
+            discountMessage = discountMessageTemplate + "\nCongratulations! You got a 25% discount! \nYour new total is: $" + (total - total * discountPercents[1]);
             break;
         case luckyNum === 3:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total * discountPercents[2]);
+            discountMessage = discountMessageTemplate + "\nCongratulations! You got a 35% discount! \nYour new total is: $" + (total - total * discountPercents[2]);
             break;
         case luckyNum === 4:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total * discountPercents[3]);
+            discountMessage = discountMessageTemplate + "\nCongratulations! You got a 50% discount! \nYour new total is: $" + (total - total * discountPercents[3]);
             break;
         case luckyNum === 5:
-            discountMessage = "Your total is: $" + total + "\nYour lucky number is: " + luckyNum + "! \nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total * discountPercents[4]);
+            discountMessage = discountMessageTemplate + "\nAMAZING! You got a 100% discount! \nYour new total is: $" + (total - total * discountPercents[4]);
             break;
     }
     return discountMessage;
