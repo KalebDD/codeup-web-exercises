@@ -9,7 +9,7 @@ while (isNaN(parseFloat(userNumber)) || userNumber % 2 === 0) {
     }
 }
 
-console.log("Number to skip is: " + userNumber);
+console.log("Number to skip is: " + userNumber + "\n\n");
 
 for (i = 1; i < 50; i += 2) {
     if (parseFloat(userNumber) === i) {
