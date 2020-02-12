@@ -6,7 +6,6 @@ function showMultiplicationTable(num) {
         console.log(num + " x " + i + " = " + num * i);
     }
 }
-
 showMultiplicationTable(7);
 
 //Q.3
@@ -23,7 +22,6 @@ function tenRandomNumbers() {
         }
     }
 }
-
 tenRandomNumbers();
 
 //Q.4
