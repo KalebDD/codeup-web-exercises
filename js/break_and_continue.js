@@ -13,7 +13,7 @@ console.log("Number to skip is: " + userNumber + "\n\n");
 
 for (i = 1; i < 50; i += 2) {
     if (parseFloat(userNumber) === i) {
-        console.log("Yikes! Skipping number " + i);
+        console.log("Yikes! Skipping number: " + i);
         continue;
     }
     console.log("Here is an odd number: " + i);
