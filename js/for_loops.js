@@ -28,7 +28,7 @@ tenRandomNumbers();
 
 //Q.4
 function numberPyramid() {
-    let i, j;
+    let j = "";
 
     for (i = 1; i <= 9; i++) {
         for (j = 1; j <= i; j++) {
@@ -37,3 +37,12 @@ function numberPyramid() {
     }
 }
 numberPyramid();
+
+//Q.5
+function subtract5() {
+    for (i = 100; i >= 5; i -= 5) {
+        console.log(i);
+    }
+}
+subtract5();
+
