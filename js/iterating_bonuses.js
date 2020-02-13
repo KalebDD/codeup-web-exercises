@@ -19,17 +19,32 @@ console.log(allIndexesOf(fruits, "pineapple"));
 
 //Q.2
 function removeAll(arr, val) {
-    var removedValues = [];
-    var newArray = [];
 
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] === val) {
-            removedValues = arr.splice(i, 1);
+          arr.splice(i, 1);
+          i--;
         }
-        newArray = arr;
     }
-    return newArray;
+    return arr;
 }
 
 var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
 console.log(removeAll(bugs, "ant"));
+
+
+//DICE QUESTIONS, SIDEBAR FROM ARRAYS
+function randomIntBetween(min, max) {
+    return Math.floor(Math.random() * max) + min;
+}
+function coinFlip() {
+    return randomIntBetween(0, 2);
+}
+function twoDice() {
+    var dice1 = randomIntBetween(1, 7);
+    var dice2 = randomIntBetween(1, 7);
+    var diceSum = dice1 + dice2;
+
+    return diceSum;
+
+}

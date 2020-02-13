@@ -52,12 +52,12 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
     function returnFirst(array) {
-        console.log(array[0]);
+        return (array[0]);
     }
     function returnSecond(array) {
-        console.log(array[2]);
+        return (array[2]);
     }
     function returnLast(array) {
-        console.log(array[array.length - 1]);
+        return (array[array.length - 1]);
     }
 })();
