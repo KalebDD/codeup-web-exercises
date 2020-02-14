@@ -33,8 +33,7 @@ var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "re
 console.log(removeAll(bugs, "ant"));
 
 
-
-//DICE QUESTIONS, SIDEBAR FROM ARRAYS
+//DICE FUNCTIONS
 function randomIntBetween(min, max) {
     return Math.floor(Math.random() * max) + min;
 }
@@ -80,8 +79,61 @@ function listOfRolls(num) {
 function listOfRollsFromDieFunc(numberOfRolls, diceFunction) {
     var arrayOfRolls = [];
 
-    arrayOfRolls +=
+    for (var i = 0; i < numberOfRolls; i++) {
+        arrayOfRolls.push(diceFunction());
+    }
+    return arrayOfRolls;
+}
+
+//END DICE FUNCTIONS
 
 
+//ARRAY PRACTICE
+//E.0
+function first(array) {
+    return array[0];
+}
+//E.1
+function secondToLast(array) {
+    return array[array.length - 2];
+}
+//E.2
+function rest(array) {
+    return array.slice(1, array.length);
+}
+//E.3
+function getLongestString(array) {
+    var elementLength = 0;
+    var longestElement = "";
+
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].length > elementLength) {
+            elementLength = array[i].length;
+            longestElement = array[i];
+        }
+    }
+    return longestElement;
+}
+//E.3-1
+function getShortestString(array) {
+    var elementLength = Infinity;
+    var shortestElement = "";
+
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].length < elementLength) {
+            elementLength = (array[i].length);
+            shortestElement = array[i];
+        } else if (array[i].length === elementLength) {
+            elementLength = elementLength.push(array[i]);
+        }
+    }
+    return shortestElement;
+}
+//E.4
+function addTwoArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+//E.5
+function getUniqueValues(array) {
 
 }

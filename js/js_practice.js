@@ -52,3 +52,15 @@ function countEvens(array) {
     return counter;
 }
 
+//contains vowels, research indexof, str.match, str.includes
+function containsVowel(str) {
+    if (typeof str === 'string' && /*IS NOT NUMERIC*/) {
+        str = str.toLowerCase();
+
+        if (str.indexOf('a') >= 0 || )
+    } else {
+        return false;
+    }
+
+
+}
