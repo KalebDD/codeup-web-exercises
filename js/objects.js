@@ -180,7 +180,10 @@
      *   `showBookInfo` function.
      */
 
-    books.createBook = function (title, authorFirstName, authorLastName) {
+    books.createBook = function (title, authorName) {
+        var authorFirstName = authorName.split(" ")[0];
+        var authorLastName = authorName.split(" ")[1];
+
         this.push({
             title: title,
             author: {
