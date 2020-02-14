@@ -28,6 +28,7 @@
      * string, and <li> tags around each planet.
      */
 
+
     function makeArrayList(array) {
         //Create UL
         var list = document.createElement("ul");
