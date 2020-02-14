@@ -193,4 +193,12 @@
         });
     }
 
+    books.showBookInfo = function(input) {
+
+            // if (input === this[i]) {
+                console.log("Book # " + (input+1) + "\nTitle: " + books[input].title + "\nAuthor: " + books[input].author.firstName + " " + books[input].author.lastName + "\n---");
+            // }
+    };
+    books.showBookInfo(2);
+
 })();
