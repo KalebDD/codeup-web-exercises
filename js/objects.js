@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -11,11 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    //OBJECT LITERAL
+        //OBJECT LITERAL
     var person = {
-        firstName: "Kaleb",
-        lastName: "Dworsky",
-    }
+            firstName: "Kaleb",
+            lastName: "Dworsky",
+        }
     console.log(person.firstName);
     console.log(person.lastName);
 
@@ -45,7 +45,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    person.sayHello = function() {
+    person.sayHello = function () {
         console.log("Hello from " + this.firstName + " " + this.lastName + "!");
     }
     person.sayHello();
@@ -70,7 +70,7 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.totalAndDiscount = function() {
+    shoppers.totalAndDiscount = function () {
         var discount = .12;
         var totalWithDiscount = "";
 
@@ -80,10 +80,10 @@
             } else {
                 totalWithDiscount = this[i].amount;
             }
-        console.log("Hello " + this[i].name + "!\n" + "Your total today is: $" + this[i].amount + "\nToday's discount for orders over $200 is: " + (discount*100) + "%\nYour new total is: $" + totalWithDiscount);
+            console.log("Hello " + this[i].name + "!\n" + "Your total today is: $" + this[i].amount + "\nToday's discount for orders over $200 is: " + (discount * 100) + "%\nYour new total is: $" + totalWithDiscount);
         }
     };
-shoppers.totalAndDiscount();
+    shoppers.totalAndDiscount();
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -97,7 +97,48 @@ shoppers.totalAndDiscount();
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+    var books = [
+        {
+            title: "The Salmon of Doubt",
+            author:
+                {
+                    firstName: "Douglas",
+                    lastName: "Adams"
+                }
+        },
+        {
+            title: "Oathbringer",
+            author:
+                {
+                    firstName: "Brandon",
+                    lastName: "Sanderson"
+                },
+        },
+        {
+            title: "Name of the Wind",
+            author:
+                {
+                    firstName: "Slow",
+                    lastName: "Writer"
+                }
+        },
+        {
+            title: "Hatchet",
+            author:
+                {
+                    firstName: "Gary",
+                    lastName: "Paulsen"
+                }
+        },
+        {
+            title: "American Gods",
+            author:
+                {
+                    firstName: "Neill",
+                    lastName: "Gaiman"
+                }
+        }
+    ];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -122,6 +163,11 @@ shoppers.totalAndDiscount();
      *      ---
      *      ...
      */
+    books.forEach(function(book, i){
+
+        console.log("Book # " + (i+1) + "\nTitle: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName + "\n---");
+    });
+
 
     /**
      * Bonus:
