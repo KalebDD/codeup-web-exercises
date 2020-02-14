@@ -163,9 +163,9 @@
      *      ---
      *      ...
      */
-    books.forEach(function(book, i){
+    books.forEach(function (book, i) {
 
-        console.log("Book # " + (i+1) + "\nTitle: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName + "\n---");
+        console.log("Book # " + (i + 1) + "\nTitle: " + book.title + "\nAuthor: " + book.author.firstName + " " + book.author.lastName + "\n---");
     });
 
 
@@ -179,5 +179,15 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    books.createBook = function (title, authorFirstName, authorLastName) {
+        this.push({
+            title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
+        });
+    }
 
 })();
