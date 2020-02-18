@@ -124,7 +124,7 @@ function getShortestString(array) {
             elementLength = (array[i].length);
             shortestElement = array[i];
         } else if (array[i].length === elementLength) {
-            elementLength = elementLength.push(array[i]);
+            shortestElement += elementLength.push(array[i]);
         }
     }
     return shortestElement;
