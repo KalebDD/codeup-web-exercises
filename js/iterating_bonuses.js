@@ -135,5 +135,8 @@ function addTwoArrays(arr1, arr2) {
 }
 //E.5
 function getUniqueValues(array) {
+    function unique(value, index, self) {
+        return self.indexOf(value) === index;
+    }
 
 }
