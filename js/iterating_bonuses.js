@@ -175,3 +175,23 @@ function getIndexesOf(arg1, arg2) {
 return indexArray;
 }
 
+//E.9
+function removeAll(array, value) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            array.splice(i, 1);
+            i--;
+        }
+    }
+    return array;
+    // array.forEach(function(char, i) {
+    //     if (char === value) {
+    //         array.splice(i, 1);
+    //         i--
+    //     }
+    // });
+}
+//E.10
+function firstTenFibonacciNumbers() {
+
+}
