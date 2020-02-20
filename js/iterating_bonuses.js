@@ -137,4 +137,33 @@ function addTwoArrays(arr1, arr2) {
 function getUniqueValues(array) {
     return [...new Set(array)];
 }
+//E.6
+function reverseArray(array) {
+    return array.slice().reverse();
+}
+//E.7
+function getRandomQuote() {
+    var quotesArray = [
+        "Something inspirational is coming.",
+        "Look towards tomorrow for answers.",
+        "Inspiration is fickle; dedication is strong."
+    ];
+    var randomNumber = Math.floor(Math.random() * 3);
+
+    return quotesArray[randomNumber];
+}
+//E.8
+function getIndexesOf(arg1, arg2) {
+    var indexArray = [];
+
+    if (arg2.includes(arg1)) {
+        arg2.split("");
+        arg2.forEach(function(char, i) {
+            if (char === arg1) {
+                indexArray.push(i);
+            }
+        });
+    }
+    return indexArray;
+}
 
