@@ -5,6 +5,8 @@
     <title>First Mapbox Map</title>
     <!-- Mapbox CSS -->
 
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet'/>
+
 
     <!-- Custom CSS -->
     <style>
@@ -21,11 +23,20 @@
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
+<!---->
+<script src="js/keys.js"></script>
 
 <!-- Mapbox JS -->
-
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoiay1kLWQiLCJhIjoiY2s2dGcyaW5oMGhwajNucm1rNDQ2Yjc5diJ9.1VUmRm5YhuZ99AkiPEqMTw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9'
+    });
+</script>
 
 <!-- Custom JS -->
-    <script src="js/mapbox-lec.js"></script>
+<script src="js/mapbox-lec.js"></script>
+
 </body>
 </html>
