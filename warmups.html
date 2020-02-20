@@ -5,66 +5,159 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Warmups</h1>
+<h1>Warmups</h1>
 
-    <script>
-        // 1-16-20
-        function helloWorld() {
-            return "Hello World!";
-        }
-        // 1-17-20
-        function quotient(num1, num2) {
-            return num1/num2;
-        }
-        // 1-21-20
-        function name(val) {
-            return "Hello " + val + ".";
-        }
-        //1-22-20
-        function calculateRectangleArea(length, width) {
-            return length*width;
-        }
-        //1-23-20
-        //incorrect, looking for length not sum
-        // function arrayLength(arr) {
-        //     const sum = 0;
-        //     for (var index = 0; index < arr.length; index++) {
-        //         sum += arr[index];
-        //     }
-        //     return sum;
-        //
-        function arrayLength(arr) {
-            return arr.length();
-        }
-        //1-24-20
-        function seven() {
-            return 7;
-        }
-        // 1-28-20
-        function firstItem(arr) {
-            return arr[0];
-        }
-        console.log(firstItem(["dog","cat","bird"]));
-        //1-29-20
-        function determineType(input) {
-            return typeof input;
-        }
+<script>
+    // 1-16-20
+    function helloWorld() {
+        return "Hello World!";
+    }
 
-        // 2-4-2020
-        function isDivisibleBy3(num) {
-            // return Math.pow(num, 2)%3 === 0
-            if (Math.pow(num, 2)%3 === 0) {
-                return true;
-            } else {
-                return false;
+    // 1-17-20
+    function quotient(num1, num2) {
+        return num1 / num2;
+    }
+
+    // 1-21-20
+    function name(val) {
+        return "Hello " + val + ".";
+    }
+
+    //1-22-20
+    function calculateRectangleArea(length, width) {
+        return length * width;
+    }
+
+    //1-23-20
+    //incorrect, looking for length not sum
+    // function arrayLength(arr) {
+    //     const sum = 0;
+    //     for (var index = 0; index < arr.length; index++) {
+    //         sum += arr[index];
+    //     }
+    //     return sum;
+    //
+    function arrayLength(arr) {
+        return arr.length();
+    }
+
+    //1-24-20
+    function seven() {
+        return 7;
+    }
+
+    // 1-28-20
+    function firstItem(arr) {
+        return arr[0];
+    }
+
+    console.log(firstItem(["dog", "cat", "bird"]));
+
+    //1-29-20
+    function determineType(input) {
+        return typeof input;
+    }
+
+    // 2-4-2020
+    function isDivisibleBy3(num) {
+        // return Math.pow(num, 2)%3 === 0
+        if (Math.pow(num, 2) % 3 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //2-5-2020
+    function isString(inp) {
+        return typeof inp === 'string';
+    }
+
+    //2-20-2020
+    var reindeerList = [
+        {
+            name: "Dot",
+            age: 5,
+            isGold: false
+        },
+        {
+            name: "Dasher",
+            age: 8,
+            isGold: true
+        },
+        {
+            name: "Patch",
+            age: 2,
+            isGold: false
+        },
+        {
+            name: "Rocket",
+            age: 6,
+            isGold: false
+        },
+        {
+            name: "Dancer",
+            age: 9,
+            isGold: true
+        },
+        {
+            name: "Prancer",
+            age: 5,
+            isGold: true
+        },
+        {
+            name: "Groot",
+            age: 9,
+            isGold: false
+        },
+        {
+            name: "Vixen",
+            age: 9,
+            isGold: true
+        },
+        {
+            name: "Comet",
+            age: 11,
+            isGold: true
+        },
+        {
+            name: "Archie",
+            age: 3,
+            isGold: false
+        },
+        {
+            name: "Cupid",
+            age: 13,
+            isGold: true
+        },
+        {
+            name: "Donder",
+            age: 16,
+            isGold: true
+        },
+        {
+            name: "Boots",
+            age: 16,
+            isGold: false
+        },
+        {
+            name: "Blizten",
+            age: 16,
+            isGold: true
+        }
+    ]
+
+    function goldReindeer(object) {
+        var goldReindeer = [];
+
+        object.forEach(function (reindeer) {
+            if (reindeer.isGold === true) {
+                goldReindeer.push(reindeer);
             }
-        }
+        });
+        return goldReindeer;
+    }
 
-        //2-5-2020
-        function isString(inp) {
-            return typeof inp === 'string';
-        }
-
-    </script>
+</script>
 </body>
 </html>
