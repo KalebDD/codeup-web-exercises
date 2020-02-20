@@ -93,14 +93,17 @@ function listOfRollsFromDieFunc(numberOfRolls, diceFunction) {
 function first(array) {
     return array[0];
 }
+
 //E.1
 function secondToLast(array) {
     return array[array.length - 2];
 }
+
 //E.2
 function rest(array) {
     return array.slice(1, array.length);
 }
+
 //E.3
 function getLongestString(array) {
     var elementLength = 0;
@@ -114,6 +117,7 @@ function getLongestString(array) {
     }
     return longestElement;
 }
+
 //E.3-1
 function getShortestString(array) {
     var elementLength = Infinity;
@@ -129,18 +133,22 @@ function getShortestString(array) {
     }
     return shortestElement;
 }
+
 //E.4
 function addTwoArrays(arr1, arr2) {
     return arr1.concat(arr2);
 }
+
 //E.5
 function getUniqueValues(array) {
     return [...new Set(array)];
 }
+
 //E.6
 function reverseArray(array) {
     return array.slice().reverse();
 }
+
 //E.7
 function getRandomQuote() {
     var quotesArray = [
@@ -152,18 +160,18 @@ function getRandomQuote() {
 
     return quotesArray[randomNumber];
 }
+
 //E.8
 function getIndexesOf(arg1, arg2) {
     var indexArray = [];
+    var arg2Array = arg2.split("");
 
-    if (arg2.includes(arg1)) {
-        arg2.split("");
-        arg2.forEach(function(char, i) {
-            if (char === arg1) {
-                indexArray.push(i);
-            }
-        });
-    }
-    return indexArray;
+    arg2Array.forEach(function (char, i) {
+        if (char === arg1) {
+            indexArray.push(i);
+        }
+    });
+
+return indexArray;
 }
 
