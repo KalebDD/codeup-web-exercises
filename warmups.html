@@ -157,6 +157,16 @@
         });
         return goldReindeer;
     }
+    //2-21-2020
+    function sayhello(object) {
+        if (typeof object === 'object') {
+            if (typeof object.name === 'string') {
+                return "Hello " + object.name;
+            }
+        } else {
+            return "Hello, my dudes!";
+        }
+    }
 
 </script>
 </body>
