@@ -178,3 +178,56 @@ function makeSandwichObjects(object1, object2) {
     });
     return sandwichArray;
 }
+
+function filterNumbers(array) {
+    var filteredArray = [];
+
+    array.forEach(function(item) {
+       if (typeof item === 'number') {
+           filteredArray.push(item);
+       }
+    });
+    filteredArray.sort();
+    return filteredArray;
+}
+
+function getOlder(dogs) {
+    dogs.forEach(function(dog) {
+        dog.age += 1;
+    });
+    return dogs;
+}
+
+function adminList(array) {
+    var counter = 0;
+
+    array.forEach(function(admin) {
+
+    });
+}
+
+function makeSandwichObjects(object1, object2) {
+    var sandwichArray = [];
+
+    object1.forEach(function(sandwich){
+       var object = {};
+       object.bread = sandwich;
+       object.filling = object2[i];
+       sandwichArray.push(object);
+    });
+    return sandwichArray;
+}
+
+// TODO Write a function named keepYellow that accepts an array of strings and returns an array with all the strings that are equal to "yellow"
+console.log(keepYellow(["yellow", "red", "blue", "yellow", "black", "brown", "yellow"]));
+
+function keepYellow(array) {
+    var yellowArray = [];
+
+    colors.forEach(function(color) {
+        if (color === "yellow") {
+            yellowArray.push(color);
+        }
+    });
+    return yellowArray;
+}

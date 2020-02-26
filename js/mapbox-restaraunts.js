@@ -30,32 +30,41 @@ var favoriteRestaurantsInformation = [
     }
 ];
 
-var deBrazil = new mapboxgl.Marker()
-    .setLngLat([-98.489085, 29.426627])
-    .addTo(map);
+// var deBrazil = new mapboxgl.Marker()
+//     .setLngLat([-98.489085, 29.426627])
+//     .addTo(map);
+//
+// var modPizza = new mapboxgl.Marker()
+//     .setLngLat([-98.51157, 29.62989])
+//     .addTo(map);
+//
+// var raisingCanes = new mapboxgl.Marker()
+//     .setLngLat([-98.709435, 29.49535])
+//     .addTo(map);
 
-var modPizza = new mapboxgl.Marker()
-    .setLngLat([-98.51157, 29.62989])
-    .addTo(map);
+favoriteRestaurantsInformation.forEach(function (restaurant) {
+    geocode(restaurant.Location, mapboxToken).then(function (coordinates) {
+        var marker = new mapboxgl.Marker()
+            .setLngLat(coordinates)
+            .addTo(map);
 
-var raisingCanes = new mapboxgl.Marker()
-    .setLngLat([-98.709435, 29.49535])
-    .addTo(map);
-
-
-favoriteRestaurantsInformation.forEach(function(restaurant){
         var Popup = new mapboxgl.Popup()
             .setHTML(restaurant)
             .addTo(map);
 
-    if (geocode(restaurant.Location, mapboxToken) == deBrazil.setLngLat) {
-         deBrazil.setPopup(Popup).togglePopup();
-    } else if (geocode(restaurant.Location, mapboxToken) == modPizza.setLngLat) {
-        modPizza.setPopup(Popup).togglePopup();
-    } else if (geocode(restaurant.Location, mapboxToken) == raisingCanes.setLngLat) {
-        raisingCanes.setPopup(Popup).togglePopup();
-    }
-});
+        marker.setPopup(Popup).togglePopup();
+    });
+};
+
+// if (geocode(restaurant.Location, mapboxToken) == deBrazil.setLngLat) {
+//     deBrazil.setPopup(Popup).togglePopup();
+// } else if (geocode(restaurant.Location, mapboxToken) == modPizza.setLngLat) {
+//     modPizza.setPopup(Popup).togglePopup();
+// } else if (geocode(restaurant.Location, mapboxToken) == raisingCanes.setLngLat) {
+//     raisingCanes.setPopup(Popup).togglePopup();
+// }
+// })
+// ;
 
 // var deBrazilPopup = new mapboxgl
 //     .Popup()
