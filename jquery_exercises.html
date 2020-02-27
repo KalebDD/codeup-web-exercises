@@ -5,16 +5,49 @@
     <title>JQuery Exercise 2-26-2020</title>
 </head>
 <body>
-<h1>JQuery Exercise</h1>
+<h1 class="text" id="title">JQuery Exercise</h1>
+<p class="text" id="info">This is going to be a test page!</p>
+<div class="container" id="list-container">
+    <ul class="list" id="test-list">
+        <li class="codeup" id="list-element">I'm a list.</li>
+        <li class="codeup" id="list-element2">Me too!</li>
+        <li class="codeup" id="list-element3">Am I as well?</li>
+    </ul>
+</div>
+<button class="hidden-button" value="Click Me">Click Me</button>
+<p class="hidden-message">Yahaha! You found me!</p>
 
+<!--Jquery-->
 <script src="js/jquery-2.2.4.js"></script>
 
-<script type = "text/javascript">
-$(document).ready(function() {
-        "use strict";
+<!--Custom JS-->
+<script type="text/javascript">
+    // $(document).ready(function () {
+    //     "use strict";
+    //
+    //     alert("Page is done loading");
+    // });
 
-        alert("Page is done loading");
+    var alertTitle = 'Welcome to the World of JQuery';
+    alert(alertTitle);
+
+
+    $('.hidden-button').bind('click', function() {
+        $('.hidden-message').css('display', 'inline-block');
     });
+
+    $('.hidden-message').css('display', 'none');
+
+    $('*').css('border', '1px solid black');
+
+    $('#title').css({'margin':'20px', 'padding':'20px'});
+
+    $('.text, .container').css('text-align', 'center');
+
+    $('li').css({'font-size':'20px', 'background-color':'yellow'});
+
+    $('.codeup').css({'border':'1px solid red', 'margin':'20px', 'list-style':'none'});
+
 </script>
 </body>
 </html>
