@@ -5,7 +5,7 @@
     <title>JQuery Exercise 2-26-2020</title>
 </head>
 <body>
-<h1 class="text" id="title">JQuery Exercise</h1>
+<h1 class="header" id="title">JQuery Exercise</h1>
 <p class="text" id="info">This is going to be a test page!</p>
 <div class="container" id="list-container">
     <ul class="list" id="test-list">
@@ -33,18 +33,29 @@
 
 
     $('.hidden-button').bind('click', function() {
-        $('.hidden-message').css('display', 'inline-block');
+        $('.hidden-message').css('display', 'block');
     });
 
     $('.hidden-message').css('display', 'none');
 
     $('*').css('border', '1px solid black');
 
-    $('#title').css({'margin':'20px', 'padding':'20px'});
+    $('#title').css({'margin':'20px', 'padding':'20px'}).click(function () {
+        $(this).css({'background-color':'rebeccapurple', 'color':'white'});
+    });
+    $('.text').css('padding', '100px').dblclick(function() {
+        $(this).css('font-size', '48px');
+    });
+    $('body').css('text-align', 'center');
 
-    $('.text, .container').css('text-align', 'center');
-
-    $('li').css({'font-size':'20px', 'background-color':'yellow'});
+    $('li').css({'font-size':'20px', 'background-color':'yellow', 'font-weight':'bold'}).hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        },
+    );
 
     $('.codeup').css({'border':'1px solid red', 'margin':'20px', 'list-style':'none'});
 
