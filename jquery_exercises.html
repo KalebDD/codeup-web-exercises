@@ -6,7 +6,16 @@
 </head>
 <body>
 <h1 class="header" id="title">JQuery Exercise</h1>
-<p class="text" id="info">This is going to be a test page!</p>
+<p class="text" id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.</p>
+<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+    laborum.</p>
 <div class="container" id="list-container">
     <ul class="list" id="test-list">
         <li class="codeup" id="list-element">I'm a list.</li>
@@ -32,7 +41,7 @@
     alert(alertTitle);
 
 
-    $('.hidden-button').bind('click', function() {
+    $('.hidden-button').bind('click', function () {
         $('.hidden-message').css('display', 'block');
     });
 
@@ -40,27 +49,30 @@
 
     $('*').css('border', '1px solid black');
 
-    $('#title').css({'margin':'20px', 'padding':'20px'}).click(function () {
-        $(this).css({'background-color':'rebeccapurple', 'color':'white'});
+    $('#title').css({'margin': '20px', 'padding': '20px'}).click(function () {
+        $(this).css({'background-color': 'rebeccapurple', 'color': 'white'});
     });
-    $('.text').css('padding', '100px').dblclick(function() {
-        $(this).css('font-size', '48px');
+    $('.text').css('padding', '100px').dblclick(function () {
+        $('p').css('font-size', '24px');
     });
     $('body').css('text-align', 'center');
 
-    $('li').css({'font-size':'20px', 'background-color':'yellow', 'font-weight':'bold'})
+    $('li').css({'font-size': '20px', 'background-color': 'yellow', 'font-weight': 'bold'})
         .hover(
-        function() {
-            $(this).css('color', 'red');
-        },
-        function() {
-            $(this).css('color', 'black');
-        },
-    );
+            function () {
+                $(this).css('color', 'red');
+            },
+            function () {
+                $(this).css('color', 'black');
+            },
+        );
 
 
-
-    $('.codeup').css({'border':'1px solid red', 'margin':'20px', 'list-style':'none'});
+    $('.codeup').css({
+        'border': '1px solid red',
+        'margin': '20px',
+        'list-style': 'none'
+    });
 
 </script>
 </body>
