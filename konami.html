@@ -2,13 +2,90 @@
 <html>
 <head>
     <title>Konami Code Exercise</title>
+
+    <meta charset="UTF-8">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Animate CSS-->
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/konami.css">
 </head>
+
 <body>
-<h1>Konami Code</h1>
+<div class="container-fluid">
+    <!--Start Main Row-->
+    <div class="row masterCols">
 
+        <!--Left Column - User Input Key-->
+        <div class="col-2">
+            <div class="card">
+                <div class="card-header">Key</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Up = &#8593; arrow</li>
+                    <li class="list-group-item">Down = &#8595; arrow</li>
+                    <li class="list-group-item">Left = &#8592; arrow</li>
+                    <li class="list-group-item">Right = &#8594; arrow</li>
+                    <li class="list-group-item">Start =</li>
+                    <li class="list-group-item">Select =</li>
+                    <li class="list-group-item">B</li>
+                    <li class="list-group-item">A</li>
+                </ul>
+            </div>
+        </div>
 
+        <!--Middle Column - Controller-->
+        <div class="col-8 p-0 text-center bg-white">
+            <div class="container">
+                <!--Header Row-->
+                <div class="row">
+                    <div class="col-12 p-5">
+                        <h1>Enter the Code</h1>
+                    </div>
+                </div>
+                <!--Controller Row-->
+                <div class="row">
+                    <div class="col-12">
+                        <img src="img/nes-controller.png" alt="nes-controller" class="animated fadeInDown">
+                        <div class="controller-buttons-div position-absolute">
+                            <div class="controller" id="up"></div>
+                            <div class="controller" id="down"></div>
+                            <div class="controller" id="left"></div>
+                            <div class="controller" id="right"></div>
+                            <div class="controller rounded-pill" id="select"></div>
+                            <div class="controller rounded-pill" id="start"></div>
+                            <div class="controller rounded-circle" id="a"></div>
+                            <div class="controller rounded-circle" id="b"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--User Input Row-->
+                <div class="row">
+                    <div class="col-12 p-5">
+                        <button type="button" class="btn btn-primary btn-lg">Play</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Middle Column-->
 
+        <!--Right Column-->
+        <div class="col-2"></div>
+        <!--End Right Column-->
+    </div>
+    <!--End Main Row-->
+</div>
 
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <!--JQuery-->
 <script src="js/jquery-2.2.4.js"></script>
 <!--Custom JS-->
