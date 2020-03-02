@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery FAQ Exercise</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>JQuery FAQ 3-2-2020</h1>
+<h2>National Parks FAQS</h2>
+<dl>
+    <dt>Question 1?</dt>
+    <dd class="invisible">Lorem</dd>
+    <dt>Question 2?</dt>
+    <dd class="invisible">Ipsum</dd>
+    <dt>Question 3?</dt>
+    <dd class="invisible">Sit</dd>
+    <dt>Question 4?</dt>
+    <dd class="invisible">Amet</dd>
+    <dt>Question 5?</dt>
+    <dd class="invisible">Lorem</dd>
+    <dt>Question 6?</dt>
+    <dd class="invisible">Ipsum</dd>
+    <dt>Question 7?</dt>
+    <dd class="invisible">Dolor</dd>
+    <dt>Question 8?</dt>
+    <dd class="invisible">Sit</dd>
+    <dt>Question 9?</dt>
+    <dd class="invisible">Amet</dd>
+    <dt>Question 10?</dt>
+    <dd class="invisible">Dolor</dd>
+</dl>
+<a href="#" id="answers">Click to see answers!</a>
+
+<!--JQuery-->
+<script src="js/jquery-2.2.4.js"></script>
+<!--Custom JS-->
+<script>
+    $("#answers").click(function (e) {
+        e.preventDefault();
+        $("dd").toggleClass("invisible");
+    });
+    $("dt").click(function (e) {
+        e.preventDefault();
+        $(this).css('background-color', 'yellow');
+    });
+</script>
+</body>
+</html>
