@@ -4,10 +4,13 @@
     <title>Konami Code Exercise</title>
 
     <meta charset="UTF-8">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/konami.css">
 </head>
@@ -17,22 +20,8 @@
     <!--Start Main Row-->
     <div class="row masterCols">
 
-        <!--Left Column - User Input Key-->
-        <div class="col-2">
-            <div class="card">
-                <div class="card-header">Key</div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Up = &#8593; arrow</li>
-                    <li class="list-group-item">Down = &#8595; arrow</li>
-                    <li class="list-group-item">Left = &#8592; arrow</li>
-                    <li class="list-group-item">Right = &#8594; arrow</li>
-                    <li class="list-group-item">Start =</li>
-                    <li class="list-group-item">Select =</li>
-                    <li class="list-group-item">B</li>
-                    <li class="list-group-item">A</li>
-                </ul>
-            </div>
-        </div>
+        <!--Left Column-->
+        <div class="col-2"></div>
 
         <!--Middle Column - Controller-->
         <div class="col-8 p-0 text-center bg-white">
@@ -45,8 +34,11 @@
                 </div>
                 <!--Controller Row-->
                 <div class="row">
-                    <div class="col-12">
-                        <img src="img/nes-controller.png" alt="nes-controller" class="animated fadeInDown">
+                    <div class="col-10 mx-auto">
+
+                        <audio id="coinAudio" src="audio/vg-coin.mp3"></audio>
+                        <img src="img/controller.png" alt="controller" class="controllerImg animated fadeInDown slow">
+                        <!--Div overlay on controller - contains divs for flashing buttons-->
                         <div class="controller-buttons-div position-absolute">
                             <div class="controller" id="up"></div>
                             <div class="controller" id="down"></div>
@@ -60,9 +52,45 @@
                     </div>
                 </div>
                 <!--User Input Row-->
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <!--User Key Card-->
+                        <button class="btn btn-primary btn-lg bg-secondary border-white rounded-pill" type="button" data-toggle="collapse"
+                                data-target="#howToPlay" aria-expanded="false" aria-controls="howToPlay">
+                            How to Play
+                        </button>
+                    </div>
+                    <!--Show User Input-->
+                    <div class="col-6 align-middle">
+                        <p class="user-input shadow-lg"></p>
+                    </div>
+                    <!--Get a Hint-->
+                    <div class="col-3">
+                        <button class="btn btn-primary btn-lg bg-secondary border-white rounded-pill" type="button" data-toggle="collapse"
+                                data-target="#userHint" aria-expanded="false" aria-controls="userHint">
+                            Get a Hint
+                        </button>
+                    </div>
+                </div>
+                <!--User Key and Hints Row-->
                 <div class="row">
-                    <div class="col-12 p-5">
-                        <button type="button" class="btn btn-primary btn-lg">Play</button>
+                    <div class="col-6">
+                        <div class="collapse" id="howToPlay">
+                            <div class="card card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="collapse" id="userHint">
+                            <div class="card card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

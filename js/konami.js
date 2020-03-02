@@ -1,69 +1,47 @@
 "use strict";
 
-// var inputKeysToWords = [
-//     {
-//         code: 38,
-//         word: "Up"
-//     }
-//     {
-//         code: 40,
-//         word: "Down"
-//     }
-//     {
-//         code: 37,
-//         word: "Left"
-//     }
-//     {
-//         code: 39,
-//         word: "Right"
-//     }
-//     {
-//         code: 66,
-//         word: "B"
-//     }
-//     {
-//         code: 65,
-//         word: "A"
-//     }
-//     {
-//         code: 13,
-//         word: "Start"
-//     }
-//     {
-//         code:,
-//         word: ""
-//     }
-// ];
+var inputKeysToWords = [
+    {code: 38, word: "Up"},
+    {code: 40, word: "Down"},
+    {code: 37, word: "Left"},
+    {code: 39, word: "Right"},
+    {code: 66, word: "B"},
+    {code: 65, word: "A"},
+    {code: 13, word: "Start"},
+    {code: 91, word: "Select"}
+];
 
 var cheatCodes = [
-    {
-        // ^ ^ \/ \/ < > < > b a enter
+    {   // i d d q d
+        name: 'doom',
+        code: [73, 68, 68, 81, 68]
+    },
+    {   // r o s e b u d
+        name: 'sims',
+        code: [82, 79, 83, 69, 66, 85, 68]
+    },
+    {   // ^ ^ \/ \/ < > < > b a enter
         name: 'konami',
         code: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
     },
-    // {
-    //     // i d d q d
-    //     name: 'doom',
-    //     code: [73, 68, 68, 81, 68]
-    // },
-    // {
-    //     // j u s t i n b a i l e y
-    //     name: 'metroid',
-    //     code: [74, 85, 83, 84, 73, 78, 66, 65, 73, 76, 69, 89]
-    // },
-    // {
-    //     // r o s e b u d
-    //     name: 'sims',
-    //     code: [82, 79, 83, 69, 66, 85, 68]
-    // }
+    {   // j u s t i n b a i l e y
+        name: 'metroid',
+        code: [74, 85, 83, 84, 73, 78, 66, 65, 73, 76, 69, 89]
+    }
 ];
 
 
 var userInput = [];
 var counter = 0;
-var enterCode = $('#enter-code').keydown(function () {
-    enterCode = true;
-});
+var coinAudio = $('#coinAudio');
+var userInput = $('.user-input');
+
+userInput.innerHTML +=
+
+
+window.setTimeout(function() {
+   coinAudio.play();
+}, 2000);
 
 $(document).keyup(function (event) {
     userInput.push(event.keyCode);
