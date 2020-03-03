@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+    "use strict";
+    $(document).ready(function () {
+        var toolsData = $.ajax("data/inventory.json").done(function (data, status, jqXhr) {
+            $('#insertProducts').html(toolsRender(data));
+        });
+        $('*').css('border', '1px black solid');
+        $('th').css({
+            'width':'150px',
+            'background-color': 'firebrick'
+        });
+        function toolRender(tool) {
+            var html = '<tr>';
+            html += '<td>' + tool.title + '</td>';
+            html += '<td>' + tool.quantity + '</td>';
+            html += '<td>' + tool.price + '</td>';
+            html += '<td>' + tool.categories.join(",") + '</td>';
+            html += '</tr>';
+            return html;
+        }
+
+        function toolsRender(toolsData) {
+            console.log(toolsData.length);
+            var html = '';
+            for (var i = 0; i < toolsData.length; i++) {
+                html += toolRender(toolsData[i]);
+            }
+            return html;
+        }
+    });
+</script>
+
+</body>
+</html>
