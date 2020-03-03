@@ -36,6 +36,38 @@
 </dl>
 <a href="#" id="answers">Click to see answers!</a>
 
+<h3>Yellowstone</h3>
+<ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+    </li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </li>
+</ul>
+<h3>Big Bend</h3>
+<ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+    </li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </li>
+</ul>
+<h3>Grand Canyon</h3>
+<ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+    </li>
+    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
+    <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </li>
+</ul>
+
+<button type="button" id="highlight" value="highlight">Highlight</button>
 <!--JQuery-->
 <script src="js/jquery-2.2.4.js"></script>
 <!--Custom JS-->
@@ -47,6 +79,21 @@
     $("dt").click(function (e) {
         e.preventDefault();
         $(this).css('background-color', 'yellow');
+    });
+
+    $('#highlight').click(function(e){
+       e.preventDefault();
+       $('ul').each(function(){
+           $(this).children().last().css('background-color', 'yellow');
+       });
+    });
+    $('h3').click(function(e){
+       e.preventDefault();
+       $(this).next().children().css('font-weight', 'bold');
+    });
+    $('li').click(function(e) {
+       e.preventDefault();
+       $(this).parent().children().first().css('color', 'blue');
     });
 </script>
 </body>
