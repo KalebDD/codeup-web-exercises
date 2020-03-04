@@ -33,15 +33,16 @@ var cheatCodes = [
 
 var userInput = [];
 var counter = 0;
-var coinAudio = new Audio('/Users/kdd/IdeaProjects/codeup-web-exercises/audio/vg-coin.mp3');
+var coinAudio = new Audio('audio/vg-coin.mp3');
 var userInput = $('.user-input');
 
-userInput.innerHTML +=
+// userInput.innerHTML +=
 
-
+$('body').click(function() {
 window.setTimeout(function() {
    coinAudio.play();
 }, 2000);
+});
 
 $(document).keyup(function (event) {
     userInput.push(event.keyCode);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog Exercise</title>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Inline Custom CSS-->
+    <style></style>
+</head>
+<body>
+
+<div class="row" id="posts"></div>
+
+<!--JQuery-->
+<script src="js/jquery-2.2.4.js"></script>
+<!--Custom Inline-JS-->
+<script>
+    //Start Blog Rendering
+    //Retrieving blog data from JSON
+    var blogData = $.ajax("data/blog.json").done(function (data) {
+        $('#posts').html(blogsRender(data));
+    });
+
+    //Iterating over all objects within array
+    function blogsRender(blogData) {
+        var html = '';
+        for (var i = 0; i < blogData.length; i++) {
+            html += blogRender(blogData[i]);
+        }
+        return html;
+    }
+
+    //Creating all html elements for every single object
+    function blogRender(blog) {
+        var html = '<div class="col-6">';
+        html += '<div>' + blog.title + blog.date + '</div>';
+        html += '<div>' + blog.content + '</div>';
+        html += '<div>' + "Categories: " + blog.categories.join(", ") + '</div>';
+        html += '</div>';
+        return html;
+    }
+</script>
+</body>
+</html>
