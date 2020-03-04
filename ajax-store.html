@@ -24,7 +24,7 @@
 <script>
     "use strict";
     $(document).ready(function () {
-        var toolsData = $.ajax("data/inventory.json").done(function (data, status, jqXhr) {
+        var toolsData = $.ajax("data/inventory.json").done(function (data) {
             $('#insertProducts').html(toolsRender(data));
         });
         $('*').css('border', '1px black solid');
@@ -37,13 +37,11 @@
             html += '<td>' + tool.title + '</td>';
             html += '<td>' + tool.quantity + '</td>';
             html += '<td>' + tool.price + '</td>';
-            html += '<td>' + tool.categories.join(",") + '</td>';
+            html += '<td>' + tool.categories.join(" / ") + '</td>';
             html += '</tr>';
             return html;
         }
-
         function toolsRender(toolsData) {
-            console.log(toolsData.length);
             var html = '';
             for (var i = 0; i < toolsData.length; i++) {
                 html += toolRender(toolsData[i]);
