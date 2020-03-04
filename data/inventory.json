@@ -1,34 +1,45 @@
 [
-    {
-        "title": "Hammer",
-        "quantity": 25,
-        "categories": [
-            "tool"
-        ],
-        "price": 20
-    }, {
-        "title": "Drill",
-        "quantity": 5,
-        "categories": [
-            "tool",
-            "powered"
-        ],
-        "price": 100
-    }, {
-        "title": "Mower",
-        "quantity": 5,
-        "categories": [
-            "tool",
-            "gas",
-            "outdoor"
-        ],
-        "price": 200
-    }, {
-        "title": "Screwdrivers",
-        "quantity": 25,
-        "categories": [
-            "tool"
-        ],
-        "price": 10
-    }
+  {
+    "title": "Hammer",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 20,
+    "description": "Made of Texas mesquite and stainless steel. Required tool for any project.",
+    "image": "img/hammer.jpeg"
+  },
+  {
+    "title": "Drill",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "powered"
+    ],
+    "price": 100,
+    "description": "Manufactured during the 1950s, these non-cordless drills are proven to last a lifetime.",
+    "image": "img/old-drill.jpg"
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 200,
+    "description": "Energy and gas-efficient, our mowers will manicure your lawn with care.",
+    "image": "img/push-mower.jpeg"
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 10,
+    "description": "Cherry handle with zebrawood inlay and carbon-alloy tipped, our screwdrivers come with a lifetime warranty. Phillips and Flathead available.",
+    "image": "img/screwdriver.jpg"
+  }
 ]

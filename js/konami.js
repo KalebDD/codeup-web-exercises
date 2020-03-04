@@ -33,7 +33,7 @@ var cheatCodes = [
 
 var userInput = [];
 var counter = 0;
-var coinAudio = $('#coinAudio');
+var coinAudio = new Audio('/Users/kdd/IdeaProjects/codeup-web-exercises/audio/vg-coin.mp3');
 var userInput = $('.user-input');
 
 userInput.innerHTML +=
