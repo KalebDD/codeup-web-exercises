@@ -31,6 +31,8 @@
 <script src="js/jquery-2.2.4.js"></script>
 <!--Custom JS-->
 <script>
+
+
     // Allow the user to type in their favorite food into the input and append it
     // to the list once the button is clicked.
     document.getElementById('add-to-list').onclick = function () {
@@ -40,7 +42,9 @@
 
         document.getElementById('favorite-food').appendChild(li);
         document.getElementById('input').value = "";
-    }
+    };
+
+
     // When the heading 'Change Me' is double clicked, change its
     // background-color to purple.
     $('#change-me').dblclick(function () {
@@ -50,18 +54,30 @@
             'color': 'white'
         });
     });
+
+
     // Allow the user to input their cohort name. Once Update button is clicked,
     //     the text should should update with the name of the cohort.
     document.getElementById('change-cohort').onclick = function () {
         var userCohort = document.getElementById('cohort-name').value;
         document.getElementById('my-cohort').innerText = userCohort;
         document.getElementById('cohort-name').value = "";
-    }
+    };
+
+
     // When 'Highlight' button is clicked, change the background color of the
     // cohort name to yellow.
-    document.getElementById('highlight').onclick = function () {
-        $('#my-cohort').css('background-color', 'yellow');
+
+    var highlightListener = function () {
+        document.getElementById('my-cohort').style['background-color'] = 'yellow';
     };
+    document.getElementById('highlight').addEventListener('click', highlightListener, false);
+    //METHOD 2
+    // document.getElementById('highlight').onclick = function () {
+    //     $('#my-cohort').css('background-color', 'yellow');
+    // };
+
+
     // Write some JavaScript that changes the background-color of the container to
     // pink after 3 seconds.
     setTimeout(function () {
