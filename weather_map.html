@@ -6,10 +6,35 @@
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--MapBox CSS/JS-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet'/>
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
+<div class="container">
+    <!--Row for current current-->
+    <div class="row">
+        <div class="col-12">
+            <div class="current-weather"></div>
+        </div>
+    </div>
+    <!--Row for expected weather-->
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-primary">3-Day Forecast</button>
+            <button type="button" class="btn btn-primary">7-Day Forecast</button>
+            <div class="expected-weather"></div>
+        </div>
+    </div>
+    <!--Row for map-->
+    <div class="row">
+        <div class="col-12">
+            <div id='map'></div>
+        </div>
+    </div>
+</div>
 
 <!--Bootstrap JS-->
 <script
