@@ -67,5 +67,12 @@ let longestEmail = filterAddress.reduce((longest, email) =>  email.length > long
 console.log(longestEmail);
 
 //Q.6
-let stringUserNames = users.reduce((usernamestring, user) => usernamestring + `${user.name}, `, "Your instructors are: ");
+let stringUserNames = users.reduce((string, user) =>
+    users.length === user.id ? string + `${user.name}.` : string + `${user.name}, `, "Your instructors are: ");
+    //Below doesn't have period at end
+    // string + `${user.name}, `, "Your instructors are: ");
 console.log(stringUserNames);
+
+
+let stringUserNames2 = users.reduce((string, user, i) => users.length - 1 === i ? string + `${user.name}.` : string + `${user.name}, `, "Your instructors are: ");
+console.log(stringUserNames2);
