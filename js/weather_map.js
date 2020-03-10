@@ -32,7 +32,7 @@ $(document).ready(function () {
         })
     );
 
-    //Toggle forecast # of days
+    //Toggle # of days forecast
     var numberOfDays = 3;
     $('.threeDays').click(function () {numberOfDays = 3; renderEverything()});
     $('.sevenDays').click(function () {numberOfDays = 7; renderEverything()});
@@ -76,10 +76,11 @@ $(document).ready(function () {
     }
     function weatherCards(input) {
         var html = '<div class="card"> <div class=card-body>';
-        html += '<h2 class="card-text">' + input.summary + '</h2>';
-        html += '<h3>' + input.humidity + '</h3>';
-        html += '<h3 class="card-text">' + input.windGust + '</h3>';
-        html += '<h3 class="card-text">' + input.pressure + '</h3>';
+        html += '<h4 class="card-title d-flex justify-content-between"><span>' + input.temperatureLow + '&#730</span><span>' + input.temperatureHigh + '&#730</span></h4>';
+        html += '<h3 class="card-text">' + input.summary + '</h3>';
+        html += '<h3><b>Humidity:</b> ' + input.humidity + '</h3>';
+        html += '<h3 class="card-text"><b>Wind:</b> ' + input.windGust + '</h3>';
+        html += '<h3 class="card-text"><b>Pressure:</b> ' + input.pressure + '</h3>';
         html += '</div> </div>';
         return html;
     }
