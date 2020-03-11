@@ -40,15 +40,15 @@ const lastUserCommitTime = (userName) => {
             return response.json();
         })
         .then((userArray) => {
-            fetch(userArray[0].payload.commits[0].url)
-            .then((commitData) => {
-                return commitData.json();
-            })
-            .then((commitJSON) => {
+            return fetch(userArray[0].payload.commits[0].url)
+        })
+        .then((commitData) => {
+            return commitData.json();
+        })
+        .then((commitJSON) => {
             console.log(commitJSON.commit.author.date);
-            });
         });
-};
+}
 lastUserCommitTime("KalebDD");
 // console.log(data);
 // const userRepo = data[0].repo.url;
