@@ -47,6 +47,7 @@ console.log(filterAddress);
 //Q.4
 let totalYears = users.reduce((total, user) => total + user.yearsOfExperience, 0);
 console.log(totalYears);
+
 let averageYears = totalYears / users.length;
 console.log(averageYears);
 
