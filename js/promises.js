@@ -40,14 +40,13 @@ const lastUserCommitTime = (userName) => {
             return response.json();
         })
         .then((userArray) => {
-            console.log(userArray);
             return fetch(userArray[0].payload.commits[0].url)
         })
         .then((commitData) => {
             return commitData.json();
         })
         .then((commitJSON) => {
-            console.log(commitJSON.commit.author.date);
+            console.log(new Date(commitJSON.commit.author.date));
         });
 }
 lastUserCommitTime("KalebDD");
@@ -57,27 +56,26 @@ lastUserCommitTime("KalebDD");
 // Add an input field and submit button (you will need to prevent the default behaviour if inside a form element) that when clicked, runs the following function...
 // Create a function that takes in a username and fetch's the color preference based on the username and sets the background color to that color.
 
-//
-// const userBackground = userInput => {
-//     fetch("data/profiles.json")
-//         .then((profiles) => {
-//             return profiles.json();
-//         })
-//         .then((profile) => {
-//             console.log(profile);
-//             if (userInput === ) {
-//                 console.log("success");
-//             }
-//         });
-//
-// };
-// userBackground();
-//
-// document.getElementById('submitButton').addEventListener("click", function () {
-//     let userInput = document.getElementById('userInput').value;
-//     userBackground(userInput);
-//     document.getElementById('userInput').value = "";
-//     }, false);
+const userBackground = userInput => {
+    fetch("data/profiles.json")
+        .then((profiles) => {
+            return profiles.json();
+        })
+        .then((profile) => {
+            if (profile[userInput] !== undefined) {
+                document.getElementsByTagName("body")[0].style['background-color'] = profile[userInput];
+            }
+            else {
+                alert("Please enter a valid username");
+            }
+        });
+};
+
+document.getElementById('submitButton').addEventListener("click", function () {
+    let userInput = document.getElementById('userInput').value;
+    userBackground(userInput);
+    document.getElementById('userInput').value = "";
+}, false);
 
 // -- Ex. 2
 //
