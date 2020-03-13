@@ -32,6 +32,20 @@ $(document).ready(function () {
         })
     );
 
+    //Reverse Geocoder -
+    function reverseGeocode(coordinates, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+            .then(function (res) {
+                return res.json();
+            })
+            // to get all the data from the request, comment out the following three lines...
+            .then(function (data) {
+                return data.features[2].place_name;
+            });
+    }
+
     //Toggle # of days forecast
     var numberOfDays = 3;
     $('.threeDays').click(function () {
@@ -52,10 +66,11 @@ $(document).ready(function () {
             reverseGeocode({
                 lat: marker.getLngLat().lat,
                 lng: marker.getLngLat().lng
-            }, mapboxToken).then(function (location) {
-                $('.current-weather').html(currentWeather(data, location));
-                $('.expected-weather').html(expectedWeather(data));
-            })
+            }, mapboxToken)
+                .then(function (location) {
+                    $('.current-weather').html(currentWeather(data, location));
+                    $('.expected-weather').html(expectedWeather(data));
+                })
         });
     }
 
@@ -76,27 +91,6 @@ $(document).ready(function () {
     }
 
     //Expected weather render
-//     function expectedWeather(input) {
-//         var html = '';
-//         for (var i = 0; i < numberOfDays; i++) {
-//             html += weatherCards(input.daily.data[i]);
-//         }
-//         return html;
-//     }
-//     function weatherCards(input) {
-//         var html = '<div class="card"> <div class=card-body>';
-//         html += '<h4 class="card-title d-flex justify-content-between"><span>' + input.temperatureLow + '&#730</span><span>' + input.temperatureHigh + '&#730</span></h4>';
-//         html += '<h3 class="card-text">' + input.summary + '</h3>';
-//         html += '<h3><b>Humidity:</b> ' + input.humidity + '</h3>';
-//         html += '<h3 class="card-text"><b>Wind:</b> ' + input.windGust + '</h3>';
-//         html += '<h3 class="card-text"><b>Pressure:</b> ' + input.pressure + '</h3>';
-//         html += '</div> </div>';
-//         return html;
-//     }
-//     renderEverything();
-// });
-
-
     function expectedWeather(weatherData) {
         var html = '';
         var weather = weatherData.daily.data;
@@ -114,23 +108,5 @@ $(document).ready(function () {
         return html;
     }
 
-
-
     renderEverything();
 });
-
-
-
-
-function reverseGeocode(coordinates, token) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
-        .then(function(res) {
-            return res.json();
-        })
-        // to get all the data from the request, comment out the following three lines...
-        .then(function(data) {
-            return data.features[2].place_name;
-        });
-}
