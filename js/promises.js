@@ -80,9 +80,46 @@ document.getElementById('submitButton').addEventListener("click", function () {
 // -- Ex. 2
 //
 // Using the Star Wars API, log the first film a given Star Wars character's homeworld appeared in
-//
-//
-//
+
+
+const getHomeWorld = (character) => {
+const starWarsAPI = `https://swapi.co/api/people/?search=${character}`;
+let homeWorld = "";
+
+//Search SWAPI for user-inputted character
+fetch(starWarsAPI)
+    .then((character) => {  //convert character data to JSON
+        return character.json();
+    })
+    .then((characterJSON) => {  //find character homeworld
+        const world = characterJSON.results[0].homeworld;
+        return fetch(world);
+    })
+    .then((world) => {  //convert world data to JSON
+        return world.json();
+    })
+    .then((worldJSON) => {  //find world's first appearance on film
+        homeWorld = worldJSON.name;
+        const firstMovie = worldJSON.films[worldJSON.films.length-1];
+        return fetch(firstMovie);
+    })
+    .then((movie) => {  //convert film data to JSON
+        return movie.json();
+    })
+    .then((movieJSON) => {  //output final message
+        let episodeTitle = movieJSON.title;
+        let episodeID = movieJSON.episode_id;
+        console.log(`${character}'s homeworld, ${homeWorld}, first appeared onscreen in Star Wars Episode ${episodeID}: ${episodeTitle}.`);
+    })
+};
+getHomeWorld("Luke");
+
+
+
+
+
+
+
 // -- Ex. 3
 //
 // Using the GitHub API and reduce(), find the average hour of the last 3 pushes. Ignore minutes.
